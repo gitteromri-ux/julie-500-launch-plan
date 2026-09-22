@@ -62,6 +62,424 @@
     @media(max-width:1100px){.opening{grid-template-columns:1fr;gap:45px}.mission{display:grid;grid-template-columns:1fr 1fr;gap:24px}.mission h1{grid-row:span 2}.mission p{margin:0}.mission .money{margin:0;font-size:54px}.funnel-line{grid-template-columns:1.5fr .7fr .7fr}.row strong{font-size:32px}.row span{font-size:24px}}
     @media(max-width:650px){.slide{padding:100px 22px 50px}.mission{display:block}.mission p{margin-top:25px}.mission .money{margin-top:28px}.opening{gap:42px}.funnel-head,.funnel-line{grid-template-columns:1.35fr .7fr .7fr;gap:10px}.funnel-head{font-size:18px}.funnel-line{min-height:88px}.slab{width:100%;min-width:0;flex-direction:column;gap:5px;height:76px}.slab b{font-size:31px}.slab span{font-size:17px;max-width:none;text-align:center}.funnel-metric{font-size:26px}.funnel-metric span{font-size:17px}.bottom-metrics{grid-template-columns:1fr 1fr;gap:28px}.bottom-metrics b{font-size:37px}.bottom-metrics span{font-size:21px}.card h3{font-size:38px}.card p,.card li{font-size:26px}.stats{gap:24px}.verdict{font-size:43px}}
   </style>
+  <style id="premium-editorial-system">
+    /* A single editorial language, sixteen deliberately different compositions.
+       All original commercial copy, evidence, thresholds and links are retained. */
+    :root{--black:#050608;--ink:#f7fbff;--blue:#b6ddf8;--muted:#d5dee6;--line:#ffffff30;--panel:#101318;--red:#fff;--green:#b6ddf8;--paper:#f5f9fc;--space:clamp(24px,5vw,80px)}
+    html{scroll-padding-top:88px;background:var(--black)}
+    body{background:var(--black);font-family:"Playfair Display",serif;font-style:italic;font-weight:400;-webkit-font-smoothing:antialiased}
+    body:before{display:none}
+    a{text-underline-offset:5px;text-decoration-thickness:1px}
+    a:focus-visible{outline:3px solid currentColor;outline-offset:6px}
+    nav{height:76px;padding:0 var(--space);background:#050608ed;border-bottom:1px solid #ffffff1c;backdrop-filter:blur(24px);box-shadow:0 8px 32px #0002}
+    .mark{font-size:26px;color:#fff;letter-spacing:-.035em}.navlinks{gap:36px}.navlinks a{font-size:21px;color:#dce5ed}.count{font-size:22px;color:#b6ddf8}
+    .slide{position:relative;isolation:isolate;overflow:hidden;min-height:100svh;padding:132px var(--space) 84px;background:var(--black);border:0;scroll-margin-top:0}
+    .inner{position:relative;z-index:1;width:min(1440px,100%);margin:auto}
+    h1,h2,h3,b,strong{font-weight:400}
+    h1,h2{letter-spacing:-.055em}
+    h2{font-size:clamp(64px,6.4vw,104px);line-height:1.04;max-width:1350px;text-wrap:balance}
+    h3{font-size:clamp(34px,3.1vw,50px);line-height:1.13;letter-spacing:-.035em}
+    p,li{line-height:1.45}
+    .blue,.green{color:var(--blue)}.red{color:var(--ink)}
+    .lede{font-size:clamp(25px,2.1vw,34px);line-height:1.35;color:var(--muted);margin-top:36px;max-width:1130px}
+    .source,#target .source{font-size:20px;line-height:1.55;color:var(--muted);margin-top:40px;max-width:none}
+    .source a,a{color:var(--blue)}
+    .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;margin-top:64px;border:0;background:none}
+    .stat{border:0;border-top:1px solid var(--line);padding:24px 0 0;background:none}
+    .stat b{font-size:clamp(52px,5.1vw,82px);line-height:1.05;color:var(--ink);letter-spacing:-.045em}
+    .stat span{font-size:25px;line-height:1.35;color:var(--muted);margin-top:17px}
+    .grid2{grid-template-columns:repeat(2,minmax(0,1fr));gap:56px;margin-top:66px}
+    .card{position:relative;min-height:0;padding:0;border:0;background:none;box-shadow:none}
+    .card h3{font-size:46px;color:var(--ink)}.card p,.card li,.rule p,.day p{font-size:27px;line-height:1.42;color:var(--muted)}
+    .card p{margin-top:24px}.card ul{margin-top:28px;padding-left:25px}.card li{padding-left:7px;margin:17px 0}
+    .rows{margin-top:60px;border-top:1px solid var(--line)}
+    .row{grid-template-columns:.82fr 1.28fr 1fr;gap:32px;padding:28px 0;align-items:center;border-bottom:1px solid var(--line)}
+    .row span{font-size:25px;line-height:1.35;color:var(--muted)}.row strong{font-size:34px;line-height:1.25;overflow-wrap:normal;letter-spacing:-.025em}.row .decision{color:var(--blue)}
+    .verdict{margin-top:64px;padding:0;border:0;font-size:clamp(36px,3.6vw,58px);line-height:1.2;letter-spacing:-.025em;max-width:1260px}
+    .guardrail{grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;margin-top:60px}
+    .rule{position:relative;padding:28px 0 0;border:0;border-top:1px solid var(--line);background:none}
+    .rule b{font-size:48px;line-height:1.15;color:var(--blue)}.rule p{margin-top:20px}
+    .timeline{gap:28px;margin-top:90px}.day{min-height:0}.day b{font-size:38px}
+    .flow{grid-template-columns:repeat(6,minmax(0,1fr));border:0;margin-top:60px;gap:20px}.step{padding:28px 0;background:none;box-shadow:none;border:0;border-top:1px solid var(--line)}.step:last-child{border-top:1px solid var(--line)}.step b{font-size:43px}.step span{font-size:23px;line-height:1.35}.step small{font-size:22px}
+    footer{padding:44px var(--space);font-size:21px;background:#050608;color:#d5dee6;border-top:1px solid #ffffff26}
+    /* Paper chapters: contrast comes from material and scale, never pale text. */
+    #math,#research,#change,#audience,#economics,#measurement,#versions,#decision{--ink:#080b10;--muted:#323c45;--line:#0713212d;--blue:#101e2b;--red:#080b10;background:var(--paper);color:var(--ink)}
+    #research,#audience,#versions{background:#e5f1f9}
+    #math .blue,#change h2 .blue,#audience h2 .blue,#economics h2 .blue,#measurement h2 .blue,#versions h2 .blue,#decision h2 .blue,#research h2 .blue{color:#080b10;box-shadow:inset 0 -.09em #b6ddf8}
+    /* 01. Machined light: a physical funnel with independent cost/rate rails. */
+    #target{padding-top:112px;padding-bottom:44px;background:#050608}
+    #target:before{content:"";position:absolute;width:950px;height:950px;right:-100px;top:-150px;border:1px solid #b6ddf814;border-radius:50%;box-shadow:0 0 0 95px #b6ddf805,0 0 0 190px #b6ddf803;pointer-events:none}
+    .opening{grid-template-columns:.8fr 1.65fr;gap:64px;align-items:center}
+    .mission{display:block;position:relative;padding:0 0 16px}
+    #target h1{font-size:clamp(76px,6.55vw,106px);line-height:.98;letter-spacing:-.06em}
+    .mission p{font-size:28px;line-height:1.35;margin-top:30px;color:#e1e8ed}
+    .mission .money{font-size:68px;color:#b6ddf8;margin-top:32px;line-height:1;letter-spacing:-.04em}
+    .mission .money span{font-size:23px;line-height:1.35;letter-spacing:0;color:#d8e2ea;margin-top:12px;max-width:330px}
+    .funnel{position:relative;padding:30px 26px 30px 18px;isolation:isolate}
+    .funnel:before{content:"";position:absolute;inset:0 -16px -4px 44%;background:#10151b;border:1px solid #ffffff1d;border-radius:26px;z-index:-1;box-shadow:inset 0 1px 0 #ffffff10,0 34px 55px #0008}
+    .funnel:after{content:"";position:absolute;inset:55px 48% -14px 8px;border-radius:50%;background:#a9dfff15;filter:blur(38px);z-index:-2}
+    .funnel-head,.funnel-line{grid-template-columns:1.52fr .73fr .85fr;gap:26px}
+    .funnel-head{font-size:24px;line-height:1.15;color:#e2ecf4;padding:0 0 25px}
+    .funnel-head span:first-child{padding-left:20px}
+    .funnel-line{min-height:88px;margin-bottom:12px}
+    .funnel-line:last-child{margin-bottom:0}
+    .slab{height:76px;min-width:0;gap:10px;padding:10px 9px;width:var(--w);border-radius:11px;color:#081320;background:linear-gradient(110deg,#f8fcff 0%,#c2e1f7 58%,#91b6ce 100%);transform:perspective(900px) rotateX(16deg) rotateY(-8deg);box-shadow:0 2px 0 #eff8ff,1px 6px 0 #8db0c8,2px 12px 0 #3e5b71,2px 15px 0 #1b2b38,8px 26px 23px #000b,inset 0 1px 2px white}
+    .slab:before{background:linear-gradient(175deg,#ffffffb0,transparent 36%);border:1px solid #fff8}
+    .slab b{font-size:40px;letter-spacing:-.05em;white-space:nowrap}
+    .slab span{font-size:20px;line-height:1.05;max-width:100px}
+    .funnel-metric{font-size:36px;letter-spacing:-.03em;color:#fff;line-height:1.05;white-space:nowrap}
+    .funnel-metric:last-child{color:#b6ddf8}
+    .funnel-metric span{font-size:20px;line-height:1.2;color:#d0deea;margin-top:7px;letter-spacing:0;white-space:normal}
+    .funnel-line:last-child .slab{background:#f8fcff;box-shadow:0 2px 0 white,1px 6px 0 #d3eaff,2px 12px 0 #8bbbdc,2px 15px 0 #3d6786,0 28px 44px #b6ddf82e}
+    .bottom-metrics{gap:32px;margin-top:42px;padding-top:28px;border-top:1px solid #ffffff35}
+    .bottom-metrics b{font-size:51px;line-height:1.1;color:#b6ddf8;letter-spacing:-.04em}.bottom-metrics span{font-size:24px;margin-top:10px;color:#e0e7ee}
+    #target .source{margin-top:28px;font-size:19px;line-height:1.45}
+    /* 02. The balance sheet is an asymmetric editorial spread. */
+    #math .inner{display:grid;grid-template-columns:1.14fr 1fr;gap:0 80px}
+    #math h2{font-size:clamp(60px,5.8vw,94px);grid-column:1}
+    #math .stats{grid-column:2;grid-row:1/3;grid-template-columns:1fr 1fr;align-content:center;gap:56px 36px;margin:0;padding:30px 0 30px 56px;border-left:1px solid #080b1028}
+    #math .stat b{font-size:92px}#math .stat{padding-top:22px}
+    #math .verdict{grid-column:1;font-size:42px;margin-top:46px}
+    #math .source{grid-column:1/-1;padding-top:30px;border-top:1px solid var(--line);margin-top:55px}
+    /* 03. Observed performance: one sharp white evidence strip. */
+    #truth .stats{background:#f1f7fc;color:#050608;padding:36px 42px;gap:42px;box-shadow:0 8px 0 #93aabd,0 26px 65px #000b}
+    #truth .stat{padding:0;border:0}#truth .stat b{color:#050608}#truth .stat span{color:#344451}
+    #truth .rows{margin-top:65px}#truth .row strong:last-child{color:#b6ddf8}
+    /* 04. Research is four annotated sheets, not four dashboard tiles. */
+    #research .grid2{gap:38px 46px;align-items:start;margin-top:70px}
+    #research .card{background:#fff;padding:42px 44px;box-shadow:0 2px 0 #fff,0 10px 0 #c5d5e1,0 35px 60px #314c6a25;border-radius:2px;min-height:315px}
+    #research .card:nth-child(2){margin-top:60px}
+    #research .card:nth-child(3){margin-top:-32px}
+    #research .card:last-child{background:#080b10;--ink:#fff;--muted:#d1e0ea;--blue:#b6ddf8;box-shadow:0 10px 0 #738ca1,0 35px 60px #314c6a35}
+    #research .card h3{font-size:48px}#research .card p{font-size:26px}
+    #research .card p:last-child{font-size:23px;margin-top:30px}
+    /* 05. Source, implication, decision. Three distinct reading rails. */
+    #research-decision .rows{border:0}
+    #research-decision .row{grid-template-columns:.72fr 1.12fr 1.15fr;padding:0;gap:36px;min-height:116px}
+    #research-decision .row .decision{position:relative;background:#d9edfc;color:#080b10;padding:28px 32px;align-self:stretch;display:flex;align-items:center;box-shadow:8px 0 0 #849caf}
+    #research-decision .row:first-child .decision{border-radius:12px 12px 0 0}
+    #research-decision .row:last-child .decision{border-radius:0 0 12px 12px;box-shadow:8px 0 0 #849caf,0 9px 0 #849caf}
+    /* 06. Subtraction against retention: two opposing editorial columns. */
+    #change .grid2{gap:0;border-top:1px solid #08121d40}
+    #change .card{padding:42px 48px 24px 0}
+    #change .card+ .card{padding:42px 0 24px 56px;border-left:1px solid #08121d40}
+    #change .card:first-child li::marker{content:"−  "}
+    #change .card:last-child li::marker{content:"+  "}
+    #change .card:last-child{background:linear-gradient(90deg,#d3e9f955,transparent)}
+    #change .verdict{padding:36px 44px;background:#090d12;color:#fff;box-shadow:12px 12px 0 #b6ddf8}
+    #change .verdict .blue{color:#b6ddf8}
+    /* 07. The campaign architecture has a spine, and one event of consequence. */
+    #build .rows{position:relative;border:0;padding-left:42px}
+    #build .rows:before{content:"";position:absolute;left:8px;top:40px;bottom:45px;width:1px;background:#b6ddf877}
+    #build .row{position:relative;grid-template-columns:.7fr 1.3fr 1fr}
+    #build .row:before{content:"";position:absolute;width:11px;height:11px;border-radius:50%;background:#b6ddf8;left:-39px;box-shadow:0 0 0 6px #050608}
+    #build .row:nth-child(3){background:#eef7ff;margin-left:-16px;padding-left:16px;padding-right:24px;color:#050608;box-shadow:0 7px 0 #6c859b}
+    #build .row:nth-child(3) span,#build .row:nth-child(3) .decision{color:#142431}
+    /* 08. A wide primary allocation, with a genuinely subordinate warm option. */
+    #audience .grid2{grid-template-columns:1.4fr 1fr;gap:64px}
+    #audience .card:first-child{padding-right:55px;border-right:1px solid #06152635}
+    #audience .guardrail{grid-template-columns:1.65fr 1fr 1fr;gap:0;background:#fff;box-shadow:0 12px 0 #b3cbdd,0 32px 60px #32557620;margin-top:64px}
+    #audience .rule{padding:36px;border:0;border-left:1px solid #09192820}
+    #audience .rule:first-child{background:#080c11;--muted:#e0eaf2;--blue:#b6ddf8;border:0}
+    #audience .rule b{font-size:65px}
+    /* 09. Creative contact sheet: large format numbers and stepped panels. */
+    #creative .grid2{gap:0;border-top:1px solid #ffffff35;counter-reset:creative}
+    #creative .card{padding:42px 44px 46px 92px;border-bottom:1px solid #ffffff35;counter-increment:creative}
+    #creative .card:nth-child(odd){border-right:1px solid #ffffff35;padding-left:66px}
+    #creative .card:before{content:counter(creative,decimal-leading-zero);position:absolute;top:46px;left:24px;color:#a9cfe8;font-size:21px}
+    #creative .card:nth-child(odd):before{left:0}
+    #creative .card h3{color:#b6ddf8;font-size:48px}
+    #creative .card:nth-child(3){background:#dcefff;color:#08121b;--ink:#08121b;--muted:#283b4b}
+    #creative .card:nth-child(3) h3,#creative .card:nth-child(3):before{color:#08121b}
+    #creative .card:nth-child(3){padding-left:92px}
+    #creative .card:nth-child(3):before{left:24px}
+    #creative .lede{font-size:37px;color:#fff;max-width:1300px}
+    /* 10. Economics read left to right, with subtraction given physical space. */
+    #economics .stats{gap:0;padding:42px 0;border-top:1px solid #08121b40;border-bottom:1px solid #08121b40}
+    #economics .stat{position:relative;border:0;padding:0 30px}
+    #economics .stat:first-child{padding-left:0}
+    #economics .stat+ .stat{border-left:1px solid #08121b30}
+    #economics .stat b{font-size:76px}
+    #economics .stat:nth-child(3){background:#d1e9fa;box-shadow:0 -42px 0 #d1e9fa,0 42px 0 #d1e9fa}
+    #economics .rows{margin-top:50px}
+    /* 11. Release gates are a connected, numbered decision sequence. */
+    #rules .guardrail{gap:56px 54px;counter-reset:gate;padding-top:26px}
+    #rules .rule{padding-top:38px;counter-increment:gate;border-top:2px solid #9ccae9}
+    #rules .rule:before{content:counter(gate,decimal-leading-zero);position:absolute;top:-24px;right:0;background:#050608;padding-left:20px;color:#b6ddf8;font-size:32px}
+    #rules .rule b{font-size:49px;color:#fff}
+    #rules .rule:nth-child(2),#rules .rule:nth-child(3){border-color:white}
+    #rules .rule:nth-child(5){background:#e5f3ff;padding:36px 30px;--muted:#263a49;box-shadow:8px 9px 0 #7294af;border:0}
+    #rules .rule:nth-child(5) b{color:#080b10}
+    #rules .rule:nth-child(5):before{background:#e5f3ff;color:#080b10;top:5px;right:14px;font-size:23px}
+    /* 12. A precise measurement ledger, with event signals highlighted. */
+    #measurement .rows{border:0}
+    #measurement .row{grid-template-columns:.82fr 1.25fr 1.05fr;padding:25px 28px;gap:34px}
+    #measurement .row:nth-child(odd){background:#e2eff8}
+    #measurement .row:nth-child(4){background:#0a0f15;color:#fff;box-shadow:0 7px 0 #95b5cc}
+    #measurement .row:nth-child(4) span{color:#d9e9f4}
+    #measurement .verdict{font-size:56px}
+    /* 13. Four rising budget platforms. Heights are schematic, not a scale. */
+    #run .timeline{align-items:start;gap:26px;margin-top:78px;padding-bottom:110px}
+    #run .day{position:relative;padding:34px 28px 40px;border:0;background:#13191f;border-radius:5px;box-shadow:0 10px 0 #293b48,0 15px 0 #0d1217,12px 35px 35px #000b;min-height:365px}
+    #run .day:before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:#b6ddf8;box-shadow:0 0 20px #b6ddf833}
+    #run .day:nth-child(2){top:32px}
+    #run .day:nth-child(3){top:64px}
+    #run .day:nth-child(4){top:96px;background:#def0ff;color:#07111a;--muted:#243b4c;box-shadow:0 10px 0 #819eB4,0 15px 0 #3e5466,12px 35px 35px #000b}
+    #run .day b{font-size:37px;white-space:nowrap;color:inherit}
+    #run .day p{font-size:27px;line-height:1.6}
+    /* 14. Revision archive as stacked, inset document tabs. */
+    #versions .rows{border:0;display:grid;gap:22px}
+    #versions .row{padding:34px 38px;background:white;border:0;box-shadow:0 7px 0 #b3c9da,0 24px 35px #183b5b12;grid-template-columns:1fr 1.15fr .6fr}
+    #versions .row:first-child{background:#080d12;color:white;--muted:#dae6f0;--blue:#b6ddf8;transform:translateX(-12px)}
+    #versions .row:nth-child(2){margin-left:26px}
+    #versions .row:nth-child(3){margin-left:52px}
+    #versions .row span:last-child{text-align:right;font-size:24px}
+    /* 15. The operating scorecard is a single instrument, not six cards. */
+    #scoreboard .flow{gap:0;border-radius:18px;overflow:hidden;background:#dceefb;box-shadow:0 9px 0 #708da3,0 35px 75px #000b}
+    #scoreboard .step{padding:32px 24px;border:0;border-right:1px solid #0c263c26;color:#07111a}
+    #scoreboard .step:last-child{border:0;background:white}
+    #scoreboard .step span{color:#223e53}.step small{color:#b6ddf8}
+    #scoreboard .step small{color:#36556c}
+    #scoreboard .stats{margin-top:74px}
+    #scoreboard .stat b{font-size:86px;color:#b6ddf8}
+    /* 16. The decision is a physical approval sheet with a clear final line. */
+    #decision .grid2{gap:0;box-shadow:0 12px 0 #a9c1d2,0 40px 65px #183b5b20;background:white}
+    #decision .card{padding:42px 46px}
+    #decision .card:first-child{background:#080d12;--ink:#fff;--muted:#e1edf5}
+    #decision .card h3{font-size:43px}
+    #decision .verdict{font-size:clamp(48px,4.6vw,74px);max-width:1400px;margin-top:76px}
+    #decision .verdict .blue{color:#080d12}
+    @media(min-width:1800px){.slide{padding-top:145px;padding-bottom:100px}.opening{gap:76px}#target h1{font-size:110px}}
+    @media(max-width:1200px) and (min-width:761px){
+      .slide{padding:120px 40px 70px}.opening{grid-template-columns:.76fr 1.35fr;gap:30px}
+      #target h1{font-size:76px}.mission p{font-size:25px}.mission .money{font-size:56px}
+      .funnel{padding-left:0;padding-right:0}.funnel-head,.funnel-line{grid-template-columns:1.2fr .7fr .8fr;gap:15px}.funnel-head{font-size:20px}
+      .slab{flex-direction:column;gap:3px}.slab b{font-size:34px}.slab span{max-width:none;font-size:18px}
+      .funnel-metric{font-size:30px}.funnel-metric span{font-size:18px}
+      h2{font-size:78px}.row strong{font-size:28px}.row span{font-size:23px}
+      .stat b,#economics .stat b,#scoreboard .stat b{font-size:58px}.stat span{font-size:22px}
+      #math .inner{gap:0 40px}#math h2{font-size:69px}#math .stats{padding-left:30px}#math .stat b{font-size:65px}
+      .card h3,#research .card h3,#creative .card h3{font-size:37px}.card p,.card li,.rule p{font-size:24px}
+      #audience .rule b{font-size:44px}#audience .rule{padding:26px}#run .timeline{grid-template-columns:1fr 1fr;gap:35px}
+      #run .day:nth-child(n){top:0}#run .timeline{padding-bottom:0}#run .day{min-height:300px}
+      .flow{grid-template-columns:repeat(3,1fr)}#scoreboard .step{border-bottom:1px solid #0c263c26}
+    }
+    @media(max-width:760px){
+      html{scroll-padding-top:70px}nav{height:66px;padding:0 22px}.mark{font-size:22px}.count{font-size:20px}.navlinks{display:none}
+      .slide{min-height:0;padding:86px 24px 64px}
+      h2{font-size:clamp(46px,12.4vw,74px);line-height:1.09;letter-spacing:-.05em;text-wrap:pretty}
+      h3{font-size:34px}.lede{font-size:25px;line-height:1.4;margin-top:28px}
+      .source,#target .source{font-size:18px;line-height:1.55;margin-top:32px;overflow-wrap:break-word}
+      .stats{grid-template-columns:1fr 1fr;gap:30px 22px;margin-top:40px}
+      .stat{padding-top:18px}.stat b{font-size:48px}.stat span{font-size:21px;line-height:1.35;margin-top:12px}
+      .grid2{grid-template-columns:1fr;gap:34px;margin-top:40px}
+      .card h3{font-size:35px}.card p,.card li,.rule p,.day p{font-size:24px}.card p{margin-top:20px}.card li{margin:15px 0}
+      .rows{margin-top:38px}.row{grid-template-columns:1fr!important;gap:12px;padding:24px 0}.row span{font-size:22px}.row strong{font-size:29px;line-height:1.3;overflow-wrap:break-word}
+      .verdict{font-size:36px;line-height:1.25;margin-top:40px}
+      .guardrail{grid-template-columns:1fr;gap:28px;margin-top:40px}.rule b{font-size:43px}.rule p{margin-top:14px}
+      #target{padding:101px 22px 54px}
+      .opening{grid-template-columns:1fr;gap:34px}.mission{padding:0}.mission p{font-size:25px;margin-top:27px}
+      #target h1{font-size:79px;line-height:.99;max-width:470px}
+      .mission .money{font-size:63px;margin-top:28px}.mission .money span{font-size:23px;max-width:320px}
+      .funnel{padding:24px 0 25px}
+      .funnel:before{inset:0 -10px 0 42%;border-radius:17px}
+      .funnel-head,.funnel-line{grid-template-columns:1.25fr .8fr .85fr;gap:13px}
+      .funnel-head{font-size:18px;padding-bottom:22px}.funnel-head span:first-child{padding-left:0}
+      .funnel-line{min-height:95px;margin-bottom:12px}
+      .slab{height:82px;width:100%;flex-direction:column;gap:7px;padding:6px 3px;border-radius:8px;transform:perspective(700px) rotateX(14deg) rotateY(-7deg)}
+      .slab b{font-size:30px;letter-spacing:-.05em}.slab span{font-size:17px;max-width:none;text-align:center}
+      .funnel-metric{font-size:25px;letter-spacing:-.035em}.funnel-metric span{font-size:17px;line-height:1.22;margin-top:8px}
+      .bottom-metrics{grid-template-columns:1fr 1fr;gap:28px 18px;margin-top:32px;padding-top:26px}
+      .bottom-metrics b{font-size:40px}.bottom-metrics span{font-size:21px;line-height:1.35}
+      #math .inner{display:block}#math h2{font-size:50px}#math .stats{grid-template-columns:1fr 1fr;margin-top:46px;padding:0;border:0;gap:34px 22px}
+      #math .stat b{font-size:58px}#math .verdict{font-size:34px;margin-top:42px}#math .source{margin-top:35px;padding-top:25px}
+      #truth .stats{padding:28px 24px;gap:32px 20px}#truth .stat b{font-size:46px}#truth .stat span{font-size:21px}#truth .rows{margin-top:46px}
+      #research .grid2{gap:32px;margin-top:42px}#research .card:nth-child(n){margin:0;padding:30px 27px;min-height:0}
+      #research .card h3{font-size:37px}#research .card p{font-size:24px}#research .card p:last-child{font-size:22px;margin-top:25px}
+      #research-decision .row{gap:16px;padding:25px 0;min-height:0}
+      #research-decision .row .decision{padding:21px 25px;border-radius:4px!important;box-shadow:5px 5px 0 #849caf!important}
+      #change .grid2{gap:0}#change .card,#change .card+ .card{padding:32px 0;border:0}
+      #change .card+ .card{border-top:1px solid var(--line);background:none}
+      #change .verdict{padding:27px 25px;font-size:33px;box-shadow:7px 7px 0 #b6ddf8}
+      #build .rows{padding-left:24px}#build .rows:before{left:0}#build .row:before{left:-29px}
+      #build .row:nth-child(3){padding:25px 18px;margin-left:-8px}#build .row:nth-child(3):before{left:-21px}
+      #audience .grid2{grid-template-columns:1fr;gap:34px}
+      #audience .card:first-child{border:0;padding:0}
+      #audience .guardrail{grid-template-columns:1fr}
+      #audience .rule{padding:30px;border:0;border-top:1px solid #08132125}
+      #audience .rule b{font-size:59px}
+      #creative .grid2{gap:0}
+      #creative .card:nth-child(n){padding:31px 20px 31px 54px;border-right:0}
+      #creative .card:nth-child(n):before{top:35px;left:12px;font-size:20px}
+      #creative .card h3{font-size:35px}#creative .lede{font-size:30px}
+      #economics .stats{gap:30px 20px;padding:28px 0;border-bottom:0}
+      #economics .stat:nth-child(n){padding:20px 0;border:0;border-top:1px solid #08121b25}
+      #economics .stat b{font-size:43px}
+      #economics .stat:nth-child(3){background:none;box-shadow:none}
+      #economics .rows{margin-top:20px}
+      #rules .guardrail{grid-template-columns:1fr;gap:44px;padding-top:16px}
+      #rules .rule{padding-top:29px}#rules .rule b{font-size:42px}#rules .rule:nth-child(5){padding:35px 27px}
+      #measurement .row{padding:24px 22px;gap:14px}
+      #measurement .verdict{font-size:37px}
+      #run .timeline{grid-template-columns:1fr;margin-top:42px;padding:0 0 0 16px;gap:34px;border-left:1px solid #b6ddf866}
+      #run .day:nth-child(n){top:0;min-height:0;padding:28px 25px 32px}
+      #run .day b{font-size:35px}#run .day p{font-size:25px;line-height:1.6;margin-top:20px}
+      #versions .rows{gap:24px}
+      #versions .row:nth-child(n){margin:0;padding:26px;transform:none;gap:16px}
+      #versions .row strong{font-size:27px}
+      #versions .row span:last-child{text-align:left;font-size:22px}
+      #scoreboard .flow{grid-template-columns:1fr 1fr;border-radius:10px}
+      #scoreboard .step{padding:24px 18px;border-bottom:1px solid #0c263c26}
+      #scoreboard .step b{font-size:37px}#scoreboard .step span{font-size:21px}#scoreboard .step small{font-size:20px}
+      #scoreboard .stats{margin-top:48px}#scoreboard .stat b{font-size:49px}
+      #decision .grid2{gap:0}
+      #decision .card{padding:30px 25px}#decision .card h3{font-size:35px}
+      #decision .verdict{font-size:43px;margin-top:54px}
+      footer{padding:35px 24px;font-size:19px;line-height:1.5}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+    @media print{nav{display:none}.slide{min-height:100vh;break-after:page;overflow:visible;padding:50px}.source{font-size:18px}}
+  </style>
+  <style id="sculptural-finish">
+    /* Final art direction: cut-glass prisms, ink, paper, and ice.
+       The commercial model and every evidence paragraph remain untouched. */
+    .slide{box-shadow:inset 0 1px 0 #ffffff12}
+    h2{font-size:clamp(66px,6.8vw,112px)}
+    .funnel{padding-left:0;padding-right:0}
+    .funnel:before{inset:0 -18px -5px 48%;border-radius:0;background:linear-gradient(105deg,#10161c,#080b0f);border:0;border-left:1px solid #d5edff2b;box-shadow:12px 14px 0 #030507,20px 30px 70px #0009}
+    .funnel:after{inset:20px 42% -30px -12px;background:radial-gradient(ellipse,#b6ddf833,transparent 68%);filter:blur(30px)}
+    .funnel-head,.funnel-line{grid-template-columns:1.62fr .72fr .84fr;gap:28px}
+    .funnel-head span:first-child{padding-left:0}
+    .funnel-line{min-height:92px;margin-bottom:17px}
+    .slab,.funnel-line:last-child .slab{
+      position:relative;isolation:isolate;height:78px;width:var(--w);min-width:0;
+      border:0;border-radius:0;background:none;box-shadow:none;padding:9px 22px 16px;
+      transform:perspective(850px) rotateX(15deg) rotateY(-6deg);
+      filter:drop-shadow(4px 20px 10px #000b);
+    }
+    .slab:before,.slab:after{content:"";position:absolute;border:0;border-radius:0;pointer-events:none}
+    .slab:before{
+      z-index:-2;inset:14px 0 -14px;
+      clip-path:polygon(0 0,100% 0,89% 100%,11% 100%);
+      background:linear-gradient(90deg,#334f64 0%,#84b2d3 13%,#476b88 48%,#20374a 88%,#11202e);
+      box-shadow:none;
+    }
+    .slab:after{
+      z-index:-1;inset:0;
+      clip-path:polygon(0 0,100% 0,89% 100%,11% 100%);
+      background:linear-gradient(155deg,#fff 0%,#e6f5ff 24%,#b9dcef 64%,#80a6c1);
+      box-shadow:inset 0 2px 0 #fff,inset 0 -2px 0 #e0f1ff;
+    }
+    .slab b{font-size:39px;position:relative}
+    .slab span{font-size:20px;position:relative}
+    .funnel-line:last-child .slab:after{background:linear-gradient(150deg,#fff,#e5f5ff 65%,#bfddf2)}
+    .funnel-line:last-child .slab{filter:drop-shadow(0 20px 18px #b6ddf844)}
+    .funnel-metric{font-size:38px}
+    .mission .money{font-size:76px}
+    #target h1{font-size:clamp(82px,7.2vw,116px)}
+    .bottom-metrics{padding-bottom:12px}
+    /* Counterweighted balance sheet, lifted from the paper ground. */
+    #math{background:linear-gradient(120deg,#fff 0%,#f5f9fc 52%,#dbeefa)}
+    #math .stats{padding:42px 36px 48px;background:#fff;border:0;box-shadow:9px 12px 0 #c0d6e5,18px 24px 0 #e8f2f9,20px 42px 70px #163b5726;transform:rotate(1deg)}
+    #math .stat{transform:rotate(-1deg)}
+    #math .stat b{font-size:94px}
+    #math .verdict{position:relative;z-index:2}
+    #truth{background:radial-gradient(ellipse at 78% 15%,#25344099,transparent 60%),#050608}
+    #truth .stats{transform:perspective(1800px) rotateX(3deg);box-shadow:0 2px 0 white,0 9px 0 #9bb8cd,0 14px 0 #334958,0 35px 70px #000b}
+    #research .card{box-shadow:0 2px 0 #fff,0 7px 0 #d5e2eb,0 11px 0 #b5cbdc,12px 38px 60px #314c6a2b}
+    #research .card:nth-child(2){transform:rotate(1.2deg)}
+    #research .card:nth-child(3){transform:rotate(-1deg)}
+    #research-decision .rows{position:relative;isolation:isolate}
+    #research-decision .rows:after{content:"";position:absolute;z-index:-1;inset:0 0 -16px 63%;background:#314c60;transform:translate(10px,0);box-shadow:16px 25px 45px #0009}
+    #research-decision .row .decision{border-radius:0!important}
+    #change .verdict{box-shadow:8px 8px 0 #a5cce7,16px 16px 0 #dbeaf5,22px 32px 50px #163b5726}
+    #build{background:radial-gradient(ellipse at 95% 80%,#25344099,transparent 65%),#050608}
+    #build .row:nth-child(3){box-shadow:0 2px 0 #fff,0 8px 0 #9cb5c9,0 12px 0 #3d5364,12px 30px 55px #000a}
+    #audience .guardrail{box-shadow:0 3px 0 white,0 10px 0 #c3dcea,0 15px 0 #93afc4,12px 38px 60px #32557630}
+    #creative .grid2{gap:24px;border:0}
+    #creative .card:nth-child(n){border:0;padding:42px 42px 44px 78px;background:linear-gradient(135deg,#202b34,#10161c);box-shadow:0 1px 0 #ffffff35,0 8px 0 #040609,8px 20px 40px #0006}
+    #creative .card:nth-child(n):before{left:24px}
+    #creative .card:nth-child(2),#creative .card:nth-child(4){transform:translateY(24px)}
+    #creative .card:nth-child(3){background:linear-gradient(145deg,#fff,#d3e9fa);box-shadow:0 2px 0 #fff,0 9px 0 #829eb4,8px 25px 50px #0008}
+    #creative .lede{margin-top:66px}
+    #economics{background:linear-gradient(140deg,#fff,#e3f0fa)}
+    #economics .stats{position:relative;isolation:isolate;background:#fff;border:0;padding:48px 0;box-shadow:0 3px 0 #fff,0 11px 0 #b6cfdf,0 17px 0 #dceaf4,10px 35px 65px #23496225}
+    #economics .stat:first-child{padding-left:30px}
+    #economics .stat:nth-child(3){box-shadow:0 -48px 0 #d1e9fa,0 48px 0 #d1e9fa}
+    #rules{background:radial-gradient(ellipse at 0% 55%,#26344188,transparent 65%),#050608}
+    #rules .rule{background:linear-gradient(180deg,#ffffff08,transparent);padding-left:20px;padding-right:16px;box-shadow:0 -1px 0 #cce9fd1a}
+    #rules .rule:nth-child(5){background:#e5f3ff;box-shadow:5px 5px 0 #a6c6dd,10px 11px 0 #526f86,20px 32px 45px #0008}
+    #measurement .rows{background:#fff;padding:12px;box-shadow:0 8px 0 #c9dce9,0 14px 0 #ecf4fa,12px 30px 55px #294d6623}
+    #measurement .row:nth-child(4){position:relative;z-index:2;transform:translateX(-20px);box-shadow:7px 8px 0 #93b6cf,15px 20px 35px #0a21382e}
+    #run .day{border-radius:0;box-shadow:0 2px 0 #ffffff30,0 9px 0 #3c5262,0 16px 0 #15222d,12px 35px 45px #000b}
+    #versions .row{box-shadow:0 2px 0 #fff,0 8px 0 #bed4e4,0 12px 0 #9eb9cc,14px 30px 50px #183b5b20}
+    #scoreboard .flow{border-radius:0;box-shadow:0 3px 0 #fff,0 10px 0 #90b0c8,0 16px 0 #3c566a,10px 36px 70px #000b}
+    #scoreboard .stats{border-top:1px solid #c5e4fa35;padding-top:24px}
+    #decision{background:linear-gradient(125deg,#fff,#e4f1fa)}
+    #decision .grid2{box-shadow:0 3px 0 white,0 10px 0 #b7d1e2,0 16px 0 #d9e9f4,14px 40px 65px #183b5b25;transform:perspective(1800px) rotateX(2deg)}
+    @media(min-width:1201px) and (max-width:1400px){
+      #economics .stat b{font-size:68px}
+    }
+    @media(min-width:761px) and (max-width:1200px){
+      #target h1{font-size:76px}.funnel-head,.funnel-line{gap:16px;grid-template-columns:1.35fr .72fr .8fr}
+      .slab{padding:8px 12px 14px}.slab b{font-size:32px}.slab span{font-size:18px}
+      .funnel-metric{font-size:30px}.mission .money{font-size:60px}
+      #math .stats{padding:32px 25px}#math .stat b{font-size:64px}
+      #economics .stat:first-child{padding-left:20px}
+    }
+    @media(min-width:761px) and (max-width:900px){
+      .stats{grid-template-columns:1fr 1fr}
+      #math .inner{display:block}
+      #math .stats{margin-top:48px;grid-template-columns:1fr 1fr}
+      #math .stat b{font-size:76px}
+      #creative .grid2{grid-template-columns:1fr}
+      #creative .card:nth-child(n){transform:none}
+      #economics .stats{gap:48px 0}
+      #economics .stat:nth-child(3){background:none;box-shadow:none}
+      #economics .stat b{font-size:68px}
+      #scoreboard .stats{gap:32px}
+    }
+    @media(max-width:760px){
+      h2{font-size:clamp(46px,12.4vw,74px)}
+      #target h1{font-size:79px}.mission .money{font-size:63px}
+      .funnel{padding-top:22px}.funnel:before{inset:0 -10px 0 43%;box-shadow:6px 8px 0 #020406,10px 25px 40px #0007}
+      .funnel-head,.funnel-line{grid-template-columns:1.3fr .78fr .88fr;gap:11px}
+      .funnel-line{margin-bottom:17px;min-height:95px}
+      .slab,.funnel-line:last-child .slab{height:83px;width:calc(76% + var(--w)*.24);padding:7px 5px 15px;gap:5px;transform:perspective(700px) rotateX(14deg) rotateY(-5deg)}
+      .slab b{font-size:29px}.slab span{font-size:16px;max-width:none}
+      .funnel-metric{font-size:25px}.funnel-metric span{font-size:17px}
+      #math .stats{padding:27px 21px;margin:44px -2px 0;gap:28px 15px;transform:none;box-shadow:6px 9px 0 #b6cfdf,12px 18px 0 #e6f0f7,15px 30px 45px #163b5720}
+      #math .stat{transform:none}#math .stat b{font-size:53px}
+      #research .card:nth-child(n){transform:none}
+      #research-decision .rows:after{display:none}
+      #creative .grid2{gap:22px}
+      #creative .card:nth-child(n){padding:30px 22px 32px 52px;transform:none}
+      #creative .card:nth-child(n):before{left:12px}
+      #creative .lede{margin-top:38px}
+      #economics .stats{padding:22px;gap:26px 16px}
+      #economics .stat:nth-child(n){padding:12px 0}
+      #economics .stat b{font-size:39px}
+      #economics .stat:nth-child(3){background:none;box-shadow:none}
+      #economics .rows{margin-top:48px}
+      #rules .rule{padding-left:15px;padding-right:12px}
+      #measurement .rows{padding:0}
+      #measurement .row:nth-child(4){transform:translateX(-5px);box-shadow:5px 7px 0 #93b6cf}
+      #scoreboard .flow{border-radius:0}
+      #decision .grid2{transform:none}
+    }
+    @media(max-width:360px){
+      #target h1{font-size:65px}
+      .opening,.mission,.funnel{min-width:0}
+      .funnel-head,.funnel-line{grid-template-columns:minmax(0,1.25fr) minmax(0,.78fr) minmax(0,.92fr);gap:9px}
+      .funnel-head{font-size:16px}
+      .funnel-metric{font-size:23px}.funnel-metric span{font-size:16px}
+      .slab b{font-size:25px}.slab span{font-size:15px}
+      .bottom-metrics b{font-size:34px}
+      #math .stat b{font-size:46px}
+      #economics .stat b{font-size:33px}
+      .mark{font-size:19px}
+    }
+  </style>
 </head>
 <body>
 <nav><div class="mark">Julie Masterclass</div><div class="navlinks"><a href="#target">Target</a><a href="#change">Change</a><a href="#build">Build</a><a href="#run">Run</a></div><div class="count"><span id="current">01</span> / 12</div></nav>
@@ -161,9 +579,9 @@
   </div></section>
   <section class="slide" id="versions"><div class="inner">
     <h2>The latest three.<br><span class="blue">Exact revisions.</span></h2>
-    <div class="rows"><div class="row"><span>Latest · tracking fix</span><strong><a href="versions/5f13275e63.html" target="_blank">22 Sep · 23:47:45 IDT</a></strong><span>5f13275e63</span></div><div class="row"><span>Pricing v7 · editorial design</span><strong><a href="versions/bbd243ed50.html" target="_blank">17 Sep · 15:16:13 IDT</a></strong><span>bbd243ed50</span></div><div class="row"><span>Previous · checkout naming</span><strong><a href="versions/fa915806ba.html" target="_blank">17 Sep · 14:41:25 IDT</a></strong><span>fa915806ba</span></div></div>
+    <div class="rows"><div class="row"><span>Latest · mobile overlay fix</span><strong><a href="versions/c9e8568c9e.html" target="_blank">23 Sep · 01:47:26 IDT</a></strong><span>c9e8568c9e</span></div><div class="row"><span>Previous · tracking fix</span><strong><a href="versions/5f13275e63.html" target="_blank">22 Sep · 23:47:45 IDT</a></strong><span>5f13275e63</span></div><div class="row"><span>Pricing v7 · editorial design</span><strong><a href="versions/bbd243ed50.html" target="_blank">17 Sep · 15:16:13 IDT</a></strong><span>bbd243ed50</span></div></div>
     <p class="lede">These are chronological code revisions, not three invented designs. Latest and v7 share the same visual design.</p>
-    <p class="source">Read-only archive pages: checkout/tracking disabled, with original commit links. Current live checkout remains unchanged. All three masterclass revisions show $49 / $79 and $179 × 5 Blueprint terms, not $149 × 5. No matching $149 × 5 masterclass revision was verified. <a href="https://www.longevitylifeacademy.com/julie-masterclass/" target="_blank">Current live site</a> · <a href="versions/manifest.json" target="_blank">Exact timestamps + original hashes</a></p>
+    <p class="source">Read-only archive pages: checkout/tracking disabled, with original commit links. Latest release fixes mobile overlays only; payment flow is not certified. All three revisions show $49 / $79 and $179 × 5 Blueprint terms, not $149 × 5. No matching $149 × 5 masterclass revision was verified. <a href="https://www.longevitylifeacademy.com/julie-masterclass/?v=c9e8568c9e-20260923" target="_blank">Current live site</a> · <a href="versions/manifest.json" target="_blank">Exact timestamps + original hashes</a></p>
   </div></section>
 
   <section class="slide" id="scoreboard"><div class="inner">
