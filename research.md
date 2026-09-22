@@ -27,7 +27,7 @@ The bounded search did not find controlled or sufficiently documented exact-matc
 - **No free-webinar detour:** Free registration benchmarks are not paid-purchase benchmarks. Adding a nurture stage consumes the 14-day window and changes the objective; it is not part of this launch.
 - **No automatic backend rescue:** The successful adjacent examples often depend on bumps or upsells. This plan adds neither and excludes future Blueprint revenue from its front-end economics.
 - **Price and date qualify the click:** Ads must state live format, exact session date and ticket price. This may reduce cheap curiosity clicks while improving relevance to the paid offer.
-- **One ad set first:** At 500 purchases, the system targets 250 weekly purchase events; even the initial $600/day buys 15 orders/day if the $40 hypothesis holds. Fragmenting that potential signal across many interest/device cells has little value before conversion proof.
+- **One ad set first:** The initial tranche is only $200. Launch three distinct concepts, keep three challengers ready, and avoid fragmenting this limited budget across interest/device cells. The 500-order objective implies 250 purchases weekly only after profitable scale, not during initial validation.
 - **Warm-only is conditional:** Broad delivery can already reach warm users. A separate warm campaign is allowed only for a distinct recovery message and a pool that supports spend; it is capped at 10%, not entitled to 10%. [Loomer](https://www.jonloomer.com/simplified-meta-ads-strategy/).
 
 ## Purchase optimization: the real disagreement
@@ -48,9 +48,9 @@ Meta reports a 7.2% median lower-funnel CPA improvement for Advantage+ audience.
 
 Highest Volume is the launch recommendation. A cost-per-result goal is an average aim, not a guaranteed maximum CPA, and Meta says it works best with 50 to 100+ weekly conversions. An aggressive cap can prevent spending rather than create demand. [Meta bidding](https://www.facebook.com/business/help/1619591734742116), [Loomer bidding](https://www.jonloomer.com/bid-strategies-best-practices-for-meta-advertising/).
 
-Launch six materially different concepts within one ad set, with placement-specific crops rather than treating aspect ratios as independent concepts. Maintain a three-concept replacement queue. Low delivery is inconclusive, not proof an ad is bad; Meta's optimized allocation is not a randomized A/B test. [Loomer testing](https://www.jonloomer.com/meta-creative-testing/).
+Launch three materially different concepts within one ad set, with placement-specific crops rather than treating aspect ratios as independent concepts. Maintain three further concepts as a replacement queue. Low delivery is inconclusive, not proof an ad is bad; Meta's optimized allocation is not a randomized A/B test. [Loomer testing](https://www.jonloomer.com/meta-creative-testing/).
 
-The $120 zero-purchase review threshold is our risk rule, not a Meta law. Under a simplified stationary Poisson model, zero purchases at one target CPA still has probability 36.8%, and at three target CPAs about 5.0%; real delivery and conversion lag violate that simple model. Therefore no automatic pause after one target CPA, and no “winner” label from three lucky purchases.
+The revised plan uses campaign tranche gates, not the superseded $120-per-ad rule. Under a simplified stationary Poisson model, zero purchases at one target CPA still has probability 36.8%, and at three target CPAs about 5.0%; real delivery and conversion lag violate that simple model. A small profitable tranche does not establish a stable CPA. Financial stop rules bound exposure; they do not prove an ad cannot work.
 
 ## Current account observations
 
@@ -73,22 +73,24 @@ Account-wide Opportunity Score: 76/100. Meta recommended Advantage+ audience for
 
 Dataset read: active with fresh browser/server timestamps; Purchase EMQ 5.6, AddToCart 8.5, InitiateCheckout 9.3. The Purchase response lists IP, user agent, country, state and fbc coverage but not email, phone, fbp or external_id. Missing fields in this response are an audit question, not proof of zero coverage. Account-specific peer benchmark tool returned no data. [Meta account](https://adsmanager.facebook.com/adsmanager/manage/accounts?act=1459085242361281).
 
-## Model and downside
+## Profit-first model, revised commercial constraint
 
 All following numbers are planning calculations, not researched performance claims:
 
-- $20,000 / $24 CPM × 1,000 = 833,333 impressions.
-- 833,333 × 2.4% link CTR = 20,000 clicks; CPC $1.00.
-- 20,000 × 90% loading = 18,000 LPVs; cost/LPV $1.111.
-- 18,000 × 10% = 1,800 carts; cost/cart $11.111.
-- 1,800 × 60% = 1,080 checkouts; cost/checkout $18.519.
-- 1,080 × 46.296% = 500 paid orders; CPA $40.
-- LPV-to-paid 2.778%; cart-to-paid 27.778%; click-to-paid 2.5%.
-- Assumed frequency 2 gives about 416,667 reached Meta accounts; this is not a delivery forecast.
-- $30/$40/$50/$80 CPA requires $15k/$20k/$25k/$40k for 500. At a fixed $20k, these CPAs imply about 667/500/400/250 paid orders.
-- 350 × $49 + 150 × $79 = $29,000 receipts, $58 AOV and 1.45× gross revenue/media. $9,000 remains before fees, refunds, tax and delivery.
-- All-$49 case yields $24,500 receipts; only $4,500 remains before those costs at $20k spend. The $25k ceiling is therefore not automatically commercially safe.
-- Maximum affordable CPA = realized ticket revenue per buyer minus payment fees, refunds, delivery costs, tax burden and required contribution. These inputs were not supplied, so net profitability is not established.
+- $12,500 / $20 CPM × 1,000 = 625,000 impressions.
+- 625,000 × 2.5% link CTR = 15,625 clicks; CPC $0.80.
+- 15,625 × 90% loading = 14,062.5 LPVs; cost/LPV $0.8889.
+- 14,062.5 × 10% = 1,406.25 carts; cost/cart $8.8889.
+- 1,406.25 × 60% = 843.75 checkouts; cost/checkout $14.8148.
+- 843.75 × 59.2593% = 500 paid orders; CPA $25.
+- LPV-to-paid 3.5556%; cart-to-paid 35.5556%; click-to-paid 3.2%.
+- Assumed frequency 2 gives 312,500 reached Meta accounts. Rounded presentation volumes are not used as new calculation denominators.
+- 350 × $49 + 150 × $79 = $29,000 gross receipts. At $12,500 media, $16,500 remains before all other costs. This is not net profit.
+- All-$49 case yields $24,500 receipts, with $12,000 remaining before fees, tax, refund/credit reserves and delivery.
+- Net ticket contribution is collected ticket cash minus all those costs. Allowed CPA = min($25, 80% of verified net contribution), protecting a proposed 20% contribution reserve. Compute by tier and use a conservative mix, not assumed VIP sales.
+- No actual cost sheet was supplied. The CPA ceiling cannot be approved until those inputs are verified. If allowable CPA is below $25, the model must outperform its illustrated targets or the 500-order objective is unsupported.
+- $25 is a required commercial target, not a forecast derived from the user's rejection of loss. It is below the $26.80 course benchmark and far below the closest live-webinar failure. The revised 3.56% LPV conversion and $0.80 CPC are hypotheses requiring validation, not proven improvements.
+- No paid test guarantees zero loss. If even the first $200 exposure is unacceptable, do not launch cold acquisition. Use approved owned-audience distribution to collect paid-order evidence first; no audience volume was verified, so 500 organic orders cannot be promised either.
 
 ## Attribution, health policy and launch gates
 
@@ -102,10 +104,10 @@ Validate $49 and $79 payment amounts, order IDs, selected tier/date, receipt, br
 
 ## Operating schedule and accountability
 
-Days 1 to 3: $600/day, cumulative $1,800, planning pace 45 orders. Days 4 to 6: $1,200/day, cumulative $5,400, 135 orders. Days 7 to 10: $1,800/day, cumulative $12,600, 315 orders. Days 11 to 14: $1,850/day, cumulative $20,000, 500 orders. These are gated budget envelopes, not a promise Meta will pace identically.
+Days 1 to 3: separate $200, $300 and $500 tranches, cumulative $1,000 and modeled 40 orders at $25 CPA. Days 4 to 6: up to $650/day, cumulative $2,950 and 118 orders. Days 7 to 10: up to $1,050/day, cumulative $7,150 and 286 orders. Days 11 to 14: up to $1,337.50/day, cumulative $12,500 and 500 orders. Each new tranche is contingent, not committed spend. These are envelopes, not instructions for automatic budget jumps.
 
-At 72 hours, require at least 30 paid orders, 72-hour CPA at or below $40, LPV-to-paid at or above 2.78%, valid checkout/signals and acceptable refunds before expansion. Expected pace is 45; 30 is the minimum validation gate, not “on pace.” Recompute remaining daily order requirement as (500 minus actual paid orders) / days remaining.
+At $200 require at least 8 paid orders, allowable CPA and positive contribution after media before releasing $300. At $500 cumulative require at least 20 paid orders and both latest-tranche and cumulative profitability before releasing the next $500. At $1,000 cumulative require at least 40 paid orders, allowable CPA and LPV-to-paid at or above 3.56%. Reserve refunds before reporting profit. These small samples indicate commercial payback, not statistical certainty or future profitability. Pause at a failed gate and allow attribution/payment lag; never increase spend to recover losses. Recompute (500 minus actual orders) / days remaining daily.
 
-Growth owns budget and purchase CPA; creative lead owns the six launch concepts and challenger queue; engineering owns checkout/signal release evidence; operations owns 500-seat capacity and policy/date accuracy; finance owns net contribution. Proposed responsibilities, not a claim these teams accepted them.
+Growth owns budget and purchase CPA; creative lead owns three initial concepts plus three challengers; engineering owns checkout/signal release evidence; operations owns 500-seat capacity and policy/date accuracy; finance owns net contribution. Proposed responsibilities, not a claim these teams accepted them.
 
-The first test authorizes at most $1,800 over 72 hours. If its gates fail, freeze expansion and report the observed projection, which may not reach 500 in the remaining window. A contingent $25k ceiling needs explicit commercial approval; no live Meta edits or spending were executed.
+The proposal requests approval for a first $200 tranche only, after the cost and technical gates. The user has not authorized any ad launch. No live Meta edits or spending were executed. Platform pacing and automated-rule delays are not exact cash caps; use supported campaign spend limits and active spend monitoring before release, never assume daily budgets cannot overspend.

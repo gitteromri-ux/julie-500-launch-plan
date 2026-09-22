@@ -29,24 +29,62 @@
     #target h1{font-size:clamp(60px,6vw,100px)}#target .lede{font-size:28px;margin-top:22px}#target .stats{margin-top:30px}#target .stat{padding:18px 26px}#target .stat b{font-size:58px}#target .flow{margin-top:28px}#target .step{padding:18px}#target .step b{font-size:38px}#target .source{margin-top:18px}.compact{font-size:25px!important}.research-link{display:inline-block;margin-top:28px;font-size:28px}
     @media(max-width:900px){nav{padding:0 20px}.navlinks{display:none}.slide{padding:94px 22px 54px}.stats,.grid2,.timeline,.guardrail{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}.step{border-bottom:1px solid var(--line)}.row{grid-template-columns:1fr}.card{min-height:0}h1{font-size:clamp(54px,16vw,88px)}h2{font-size:clamp(46px,13vw,72px)}}
     @media print{nav{display:none}.slide{min-height:100vh;break-after:page;padding-top:60px}}
+    /* Executive edition: dimensional funnel, editorial hierarchy, no dashboard chrome. */
+    body{background:#020408}body:before{display:none}
+    nav{background:#020408e8;border-bottom-color:#ffffff12}
+    .slide{background:radial-gradient(ellipse at 85% 40%,#0a223440,transparent 55%);border-bottom-color:#ffffff14;padding-top:120px}
+    .inner{width:min(1500px,100%)}h2{max-width:1250px;line-height:1.02}
+    .stats{border:0;background:transparent;gap:40px}.stat{background:transparent;padding:20px 0;border-top:1px solid #8bcbff66}
+    .stat b{color:#b3e0ff}.stat span{font-size:25px}
+    .card{border:0;border-top:1px solid #8bcbff55;background:linear-gradient(150deg,#0d203344,transparent 70%);box-shadow:none;padding:32px 0;min-height:0}
+    .grid2{column-gap:70px;row-gap:28px}.card h3{font-size:46px}.card p,.card li{font-size:28px}
+    .rule{border:0;border-top:1px solid #80caff66;background:transparent;padding:28px 0}.guardrail{column-gap:44px}
+    .row{padding:28px 0;border-bottom-color:#ffffff20}.row span{font-size:27px}.row strong{font-size:38px}
+    .source{font-size:21px;color:#bed2e1}.verdict{border:0;padding:0;font-size:60px}
+    .opening{display:grid;grid-template-columns:.75fr 1.6fr;gap:65px;align-items:center}
+    #target{min-height:100svh;padding-top:105px;padding-bottom:42px}
+    #target h1{font-size:clamp(78px,6.8vw,112px);line-height:.94;letter-spacing:-.065em}
+    .mission p{font-size:28px;line-height:1.25;margin-top:28px;color:#d2e5f2}
+    .mission .money{font-size:66px;color:#aadfff;display:block;margin-top:32px;line-height:1;font-weight:400}
+    .mission .money span{font-size:26px;display:block;margin-top:14px;color:white}
+    .funnel-head,.funnel-line{display:grid;grid-template-columns:1.55fr .72fr .72fr;gap:24px;align-items:center}
+    .funnel-head{font-size:25px;color:#d5e9f7;padding:0 0 25px}
+    .funnel-line{min-height:83px;margin-bottom:9px}
+    .slab{position:relative;height:81px;width:var(--w);min-width:190px;justify-self:center;text-align:center;display:flex;align-items:center;justify-content:center;gap:18px;background:linear-gradient(115deg,#e1f4ff,#7cbcec 43%,#244b6e);border-radius:9px 9px 13px 13px;color:#02080e;box-shadow:0 11px 0 #18334c,0 19px 28px #000c,inset 0 2px 1px #ffffffbf;transform:perspective(700px) rotateX(12deg);isolation:isolate}
+    .slab:before{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(165deg,#ffffff55,transparent 40%);z-index:-1}
+    .slab b{font-size:43px;font-weight:400;line-height:1}.slab span{font-size:22px;line-height:1.05;text-align:left;max-width:95px}
+    .funnel-metric{font-size:38px;line-height:1;color:#b4e0ff}.funnel-metric span{display:block;font-size:22px;line-height:1.15;color:white;margin-top:9px}
+    .funnel-line:last-child .slab{background:linear-gradient(120deg,#fff,#a7ddff);box-shadow:0 11px 0 #3d6d92,0 20px 65px #499fdf33}
+    .bottom-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-top:30px;padding-top:22px;border-top:1px solid #a9dfff50}
+    .bottom-metrics b{font-size:45px;font-weight:400;color:#b4e0ff;display:block}.bottom-metrics span{font-size:23px;display:block;margin-top:6px}
+    #target .source{font-size:19px;max-width:1350px;margin-top:20px}
+    .flow{border:0;gap:18px}.step{border:0;border-top:2px solid #a5daff;background:linear-gradient(#0b2133,transparent);padding:28px 12px;box-shadow:0 15px 35px #0005}.step:last-child{border-top:2px solid #a5daff}.step b{font-size:48px}
+    @media(max-width:1100px){.opening{grid-template-columns:1fr;gap:45px}.mission{display:grid;grid-template-columns:1fr 1fr;gap:24px}.mission h1{grid-row:span 2}.mission p{margin:0}.mission .money{margin:0;font-size:54px}.funnel-line{grid-template-columns:1.5fr .7fr .7fr}.row strong{font-size:32px}.row span{font-size:24px}}
+    @media(max-width:650px){.slide{padding:100px 22px 50px}.mission{display:block}.mission p{margin-top:25px}.mission .money{margin-top:28px}.opening{gap:42px}.funnel-head,.funnel-line{grid-template-columns:1.35fr .7fr .7fr;gap:10px}.funnel-head{font-size:18px}.funnel-line{min-height:88px}.slab{width:100%;min-width:0;flex-direction:column;gap:5px;height:76px}.slab b{font-size:31px}.slab span{font-size:17px;max-width:none;text-align:center}.funnel-metric{font-size:26px}.funnel-metric span{font-size:17px}.bottom-metrics{grid-template-columns:1fr 1fr;gap:28px}.bottom-metrics b{font-size:37px}.bottom-metrics span{font-size:21px}.card h3{font-size:38px}.card p,.card li{font-size:26px}.stats{gap:24px}.verdict{font-size:43px}}
   </style>
 </head>
 <body>
 <nav><div class="mark">Julie Masterclass</div><div class="navlinks"><a href="#target">Target</a><a href="#change">Change</a><a href="#build">Build</a><a href="#run">Run</a></div><div class="count"><span id="current">01</span> / 12</div></nav>
 <main>
   <section class="slide" id="target"><div class="inner">
-    <h1><span class="blue">500 purchases.</span><br>14 days.</h1>
-    <p class="lede">$49 Masterclass + $79 VIP. Count unique paid orders, not leads, free trials or Blueprint purchases.</p>
-    <div class="stats"><div class="stat"><b>$20k</b><span>planned media</span></div><div class="stat"><b>$40</b><span>planned CPA</span></div><div class="stat"><b>2.78%</b><span>LPV → purchase</span></div><div class="stat"><b>27.78%</b><span>cart → purchase</span></div></div>
-    <div class="flow"><div class="step"><b>833,333</b><span>Impressions</span><small>$24 CPM</small></div><div class="step"><b>20,000</b><span>Link clicks</span><small>$1 CPC · 2.4% CTR</small></div><div class="step"><b>18,000</b><span>Loaded visits</span><small>$1.11 per LPV</small></div><div class="step"><b>1,800</b><span>Add to carts</span><small>$11.11 per cart</small></div><div class="step"><b>1,080</b><span>Checkouts</span><small>$18.52 each</small></div><div class="step"><b>500</b><span>Paid orders</span><small>35.7 per day</small></div></div>
-    <p class="source">Planning case, not proven Julie performance. Reach ≈416,667 Meta accounts at assumed frequency 2.0. 90% click-to-load; 10% LPV-to-cart; 60% cart-to-checkout; 46.3% checkout-to-paid. Benchmark context: <a href="https://www.triplewhale.com/blog/facebook-ads-benchmarks" target="_blank">Triple Whale</a>. All stage rates are hypotheses to validate.</p>
+    <div class="opening"><div class="mission"><h1><span class="blue">500<br>purchases.</span><br>Profit first.</h1><p>14 days. $49 / $79 tickets.<br>$200 first test.<br>Prove profit. Then scale.</p><b class="money">$12,500<span>conditional total, not committed spend</span></b></div>
+    <div class="funnel"><div class="funnel-head"><span>Funnel volume</span><span>Unit cost</span><span>Stage rate</span></div>
+    <div class="funnel-line"><div class="slab" style="--w:100%"><b>625k</b><span>Impressions</span></div><div class="funnel-metric">$20<span>CPM</span></div><div class="funnel-metric">2.0×<span>Frequency</span></div></div>
+    <div class="funnel-line"><div class="slab" style="--w:94%"><b>15,625</b><span>Link clicks</span></div><div class="funnel-metric">$0.80<span>Per click</span></div><div class="funnel-metric">2.50%<span>Click rate</span></div></div>
+    <div class="funnel-line"><div class="slab" style="--w:87%"><b>14,063</b><span>Loaded visits</span></div><div class="funnel-metric">$0.89<span>Per visit</span></div><div class="funnel-metric">90%<span>Click → visit</span></div></div>
+    <div class="funnel-line"><div class="slab" style="--w:80%"><b>1,406</b><span>Add to carts</span></div><div class="funnel-metric">$8.89<span>Per cart</span></div><div class="funnel-metric">10%<span>Visit → cart</span></div></div>
+    <div class="funnel-line"><div class="slab" style="--w:73%"><b>844</b><span>Checkouts</span></div><div class="funnel-metric">$14.81<span>Per checkout</span></div><div class="funnel-metric">60%<span>Cart → checkout</span></div></div>
+    <div class="funnel-line"><div class="slab" style="--w:66%"><b>500</b><span>Paid orders</span></div><div class="funnel-metric">$25<span>CPA ceiling*</span></div><div class="funnel-metric">59.26%<span>Checkout → paid</span></div></div>
+    </div></div>
+    <div class="bottom-metrics"><div><b>312,500</b><span>Modeled reach</span></div><div><b>3.56%</b><span>Visit → purchase</span></div><div><b>35.56%</b><span>Cart → purchase</span></div><div><b>35.7/day</b><span>Paid-order pace</span></div></div>
+    <p class="source">Required performance, not a prediction. *Allowed CPA = lower of $25 or 80% of verified net ticket contribution. No cost sheet, no launch. Volumes rounded; widths schematic. <a href="https://www.triplewhale.com/blog/facebook-ads-benchmarks" target="_blank">Benchmark context</a>; exact-use-case evidence follows.</p>
   </div></section>
 
   <section class="slide" id="math"><div class="inner">
-    <h2>The base case needs <span class="blue">18,000 loaded visits.</span></h2>
-    <div class="flow"><div class="step"><b>833k</b><span>Impressions</span><small>$24 CPM</small></div><div class="step"><b>20k</b><span>Link clicks</span><small>2.4% CTR · $1.00 CPC</small></div><div class="step"><b>18k</b><span>Landing views</span><small>90% click-to-load</small></div><div class="step"><b>1,800</b><span>Add to carts</span><small>10% of LPV</small></div><div class="step"><b>1,080</b><span>Checkout starts</span><small>60% of carts</small></div><div class="step"><b>500</b><span>Purchases</span><small>46.3% of checkout</small></div></div>
-    <div class="stats"><div class="stat"><b>$1.11</b><span>cost per landing view</span></div><div class="stat"><b>$11.11</b><span>cost per add to cart</span></div><div class="stat"><b>$18.52</b><span>cost per checkout</span></div><div class="stat"><b>2.78%</b><span>landing page to purchase</span></div></div>
-    <p class="source">Model arithmetic: $20,000 / stage volume. Our 2.78% LPV-to-purchase target equals 2.50% click-to-purchase at 90% loading, versus the dataset's 1.53% click-to-purchase median. The improvement is a hypothesis, not demonstrated lift. <a href="https://www.triplewhale.com/blog/facebook-ads-benchmarks" target="_blank">Triple Whale</a></p>
+    <h2>Profit is the constraint.<br><span class="blue">Volume earns its budget.</span></h2>
+    <div class="stats"><div class="stat"><b>$200</b><span>first validation tranche</span></div><div class="stat"><b>≤$25</b><span>provisional paid-order CPA</span></div><div class="stat"><b>20%</b><span>net contribution reserve</span></div><div class="stat"><b>$0</b><span>automatic scale allocation</span></div></div>
+    <p class="verdict">Ticket cash minus tax, fees,<br>refund reserve and delivery costs.<br><span class="blue">That is the CPA starting point.</span></p>
+    <p class="source">CPA cap = min($25, net contribution × 80%). For $40 net contribution, cap is $25; for $25 net contribution, cap is $20. This is a proposed commercial rule, not a zero-loss guarantee. Initial test risk remains. If no test loss is acceptable, do not launch cold paid traffic.</p>
   </div></section>
 
   <section class="slide" id="truth"><div class="inner">
@@ -59,7 +97,7 @@
 
   <section class="slide" id="research"><div class="inner">
     <h2>Research supports a test.<br><span class="blue">Not a promise.</span></h2>
-    <div class="grid2"><div class="card"><h3>$26.80 course CPA</h3><p>Triple Whale: e-learning / online courses. 40,000+ brands overall, Aug 2025 to Jul 2026. Closest large dataset, not a live-event guarantee.</p><p><a href="https://www.triplewhale.com/blog/facebook-ads-benchmarks" target="_blank">Read the dataset</a></p></div><div class="card"><h3>$70 to $100 live-webinar CPA</h3><p>Practitioner selling $40 to $50 live sessions reported loss-making cold Meta acquisition. Closest format match; one anecdote, no audited denominator.</p><p><a href="https://www.reddit.com/r/DigitalMarketing/comments/1p1yr69/how_do_you_sell_live_courses_with_meta_ads/" target="_blank">Read the original discussion</a></p></div><div class="card"><h3>$24 adjacent CPA</h3><p>Recorded $24 to $27 training, worldwide traffic, 1,100 purchases, 2 to 4% page conversion. Self-reported; upsells supported economics.</p><p><a href="https://www.reddit.com/r/FacebookAds/comments/1n0i9lc/how_im_selling_24_digital_assets_and_turning/" target="_blank">Read the campaign breakdown</a></p></div><div class="card"><h3>Our $40 is a test target</h3><p>US live longevity is harder than a global evergreen download. No exact-match evidence found proving 500 $49/$79 paid seats in 14 days.</p><p><a href="research.md" target="_blank">Full research + evidence limits</a></p></div></div>
+    <div class="grid2"><div class="card"><h3>$26.80 course CPA</h3><p>Triple Whale: e-learning / online courses. 40,000+ brands overall, Aug 2025 to Jul 2026. Closest large dataset, not a live-event guarantee.</p><p><a href="https://www.triplewhale.com/blog/facebook-ads-benchmarks" target="_blank">Read the dataset</a></p></div><div class="card"><h3>$70 to $100 live-webinar CPA</h3><p>Practitioner selling $40 to $50 live sessions reported loss-making cold Meta acquisition. Closest format match; one anecdote, no audited denominator.</p><p><a href="https://www.reddit.com/r/DigitalMarketing/comments/1p1yr69/how_do_you_sell_live_courses_with_meta_ads/" target="_blank">Read the original discussion</a></p></div><div class="card"><h3>$24 adjacent CPA</h3><p>Recorded $24 to $27 training, worldwide traffic, 1,100 purchases, 2 to 4% page conversion. Self-reported; upsells supported economics.</p><p><a href="https://www.reddit.com/r/FacebookAds/comments/1n0i9lc/how_im_selling_24_digital_assets_and_turning/" target="_blank">Read the campaign breakdown</a></p></div><div class="card"><h3>$25 must be earned</h3><p>US live longevity is harder than a global evergreen download. No exact-match evidence found proving 500 $49/$79 paid seats in 14 days.</p><p><a href="research.md" target="_blank">Full research + evidence limits</a></p></div></div>
   </div></section>
 
   <section class="slide" id="research-decision"><div class="inner">
@@ -90,23 +128,22 @@
   </div></section>
 
   <section class="slide" id="creative"><div class="inner">
-    <h2><span class="blue">Six distinct ads.</span><br>Not six cosmetic edits.</h2>
+    <h2><span class="blue">Three ads launch.</span><br>Three challengers wait.</h2>
     <div class="grid2"><div class="card"><h3>2 × Julie direct-to-camera</h3><p>20 to 35 seconds. Practical daily routine versus science explained simply. Price + live format visible early.</p></div><div class="card"><h3>2 × teaching demonstrations</h3><p>Show one real lesson excerpt, then what the full session covers. No guaranteed biological-age outcomes.</p></div><div class="card"><h3>1 × factual offer card</h3><p>$49, 60 minutes, exact date/time. Low commitment, no course enrollment required.</p></div><div class="card"><h3>1 × VIP comparison</h3><p>$79, 90 minutes including 30-minute Q&A. Credit conditions explicit, never “cash refund” without that mechanism.</p></div></div>
-    <p class="lede">Video variants in 9:16 and 4:5 within each ad. Static 4:5. Three challenger concepts ready by Day 4.</p>
-    <p class="source">Six concepts is our testing allocation, not a Meta rule. Julie’s 65-second ad in set 2: 3,242 LPVs, $3,509.63 spend, one attributed purchase. Keep her presence; do not assume the existing long ad is a sales winner. <a href="https://web.facebook.com/business/ads/performance-marketing?_rdc=11&_rdr" target="_blank">Meta creative diversification</a></p>
+    <p class="lede">Start with one Julie video, one lesson demonstration and the $49 offer card. Hold the other three until paid-order evidence earns more spend.</p>
+    <p class="source">Video in 9:16 and 4:5; static in 4:5. Three initial concepts is a small-budget allocation, not a Meta rule. Julie’s existing 65-second ad produced 3,242 LPVs and one attributed purchase; her presence is not proof of a sales winner. <a href="https://web.facebook.com/business/ads/performance-marketing?_rdc=11&_rdr" target="_blank">Meta creative diversification</a></p>
   </div></section>
 
   <section class="slide" id="economics"><div class="inner">
-    <h2>The budget is a <span class="blue">decision range.</span></h2>
-    <div class="stats"><div class="stat"><b>$15k</b><span>stretch · $30 CPA</span></div><div class="stat"><b>$20k</b><span>base · $40 CPA</span></div><div class="stat"><b>$25k</b><span>defensive · $50 CPA</span></div><div class="stat"><b>$1,429</b><span>base daily budget</span></div></div>
-    <div class="rows"><div class="row"><span>Illustrative sales mix</span><strong>350 × $49 · 150 × $79</strong><strong>$29,000 cash sales</strong></div><div class="row"><span>Base front-end MER</span><strong>$29,000 / $20,000</strong><strong class="decision">1.45×</strong></div><div class="row"><span>Strategic return</span><strong>VIP credit + Blueprint follow-up</strong><strong class="decision">Backend not counted</strong></div></div>
-    <p class="lede">$80 CPA downside: $20k buys 250 orders.<br>500 would cost $40k, above ticket revenue.</p>
-    <p class="source">70% / 30% mix is an assumption. $9,000 remains after media, before fees, refunds, delivery costs and tax. All-$49 case: $24,500 revenue and $4,500 before those costs. $50 CPA may lose money if mostly $49 buyers; ceiling is not pre-approved. $80 is a sensitivity informed by the closest live-webinar anecdote, not a forecast.</p>
+    <h2>No loss-making scale.<br><span class="blue">No backend rescue story.</span></h2>
+    <div class="stats"><div class="stat"><b>$24,500</b><span>500 seats, all at $49</span></div><div class="stat"><b>$12,500</b><span>media only if $25 CPA holds</span></div><div class="stat"><b>$12,000</b><span>remaining before other costs</span></div><div class="stat"><b>1.96×</b><span>gross sales / media</span></div></div>
+    <div class="rows"><div class="row"><span>Blended scenario</span><strong>350 × $49 + 150 × $79</strong><strong>$29,000 gross sales</strong></div><div class="row"><span>Profit test</span><strong>Net contribution less media</strong><strong class="decision">Must stay positive</strong></div><div class="row"><span>Budget release</span><strong>Latest tranche + cumulative cohort</strong><strong class="decision">Both must pass</strong></div></div>
+    <p class="source">Gross receipts are not profit. Deduct fees, tax, conservative refunds, credit liabilities and fulfillment before computing allowable CPA. $25 is a planning ceiling, not proven attainable performance. No profitable proof means no next tranche. No assumed Blueprint upsells.</p>
   </div></section>
 
   <section class="slide" id="rules"><div class="inner">
     <h2>Scale evidence.<br><span class="red">Kill waste.</span></h2>
-    <div class="guardrail"><div class="rule"><b>Immediate stop</b><p>Wrong price, broken payment, duplicate Purchase or restricted event. Repair before more spend.</p></div><div class="rule"><b>$120, zero sales</b><p>After at least 72 hours and conversion-lag review: pause that ad. Three target CPAs is a risk rule, not proof.</p></div><div class="rule"><b>100 loaded visits</b><p>Under 5 carts: inspect offer, message match and form friction. Do not blame the audience automatically.</p></div><div class="rule"><b>Scale gate</b><p>At least 30 paid orders; last 72h CPA ≤ $40; LPV-to-paid ≥2.78%; payments and refunds clean.</p></div><div class="rule"><b>CPA > $50</b><p>Freeze expansion. Fix the weakest stage. No automatic spend to $25k; CEO must approve economics.</p></div><div class="rule"><b>Controlled edits</b><p>One planned budget review daily. No duplicate “scaling” campaigns. Preserve winning ads and post IDs.</p></div></div>
+    <div class="guardrail"><div class="rule"><b>Before $1</b><p>Verify net contribution, refund reserve, payment flow and eligible Purchase signals.</p></div><div class="rule"><b>$200 test</b><p>Stop at the tranche limit. Release another $300 only after ≥8 paid orders, CPA within cap and positive net contribution after ads.</p></div><div class="rule"><b>48h gate</b><p>At $500 cumulative: ≥20 paid orders, CPA within cap, latest tranche profitable. Then release up to $500 more.</p></div><div class="rule"><b>72h gate</b><p>At $1,000 cumulative: ≥40 paid orders, LPV-to-paid ≥3.56%, latest tranche and total profitable after reserves.</p></div><div class="rule"><b>Any failed gate</b><p>No new budget. Pause delivery, allow conversion lag, diagnose. Never spend more just to recover losses.</p></div><div class="rule"><b>Every scale step</b><p>Recheck latest 72h and cumulative profit. No automatic doubling. Miss the gate, revise the 500-seat forecast.</p></div></div>
     <p class="source">Meta advises combining ad sets and minimizing learning-phase edits. Meta recommends 50 to 100+ weekly conversions for goal-based bidding; launch with highest volume first. Low delivery is inconclusive, not a failed creative. <a href="https://www.facebook.com/business/help/1619591734742116" target="_blank">Meta bidding guidance</a></p>
   </div></section>
 
@@ -119,7 +156,7 @@
 
   <section class="slide" id="run"><div class="inner">
     <h2>Fourteen days.<br><span class="blue">Four command windows.</span></h2>
-    <div class="timeline"><div class="day"><b>Days 1 to 3</b><p>$600/day<br>$1,800 cumulative<br>45 paid orders at $40 CPA.<br>Launch six concepts after release gate.</p></div><div class="day"><b>Days 4 to 6</b><p>$1,200/day<br>$5,400 cumulative<br>135 paid orders cumulative.<br>Only if the first gate passes.</p></div><div class="day"><b>Days 7 to 10</b><p>$1,800/day<br>$12,600 cumulative<br>315 paid orders cumulative.<br>Release winners and challengers.</p></div><div class="day"><b>Days 11 to 14</b><p>$1,850/day<br>$20,000 cumulative<br>500 paid orders cumulative.<br>Close the gap, not imaginary scarcity.</p></div></div>
+    <div class="timeline"><div class="day"><b>Days 1 to 3</b><p>$200 → $300 → $500<br>Each separately earned.<br>$1,000 cumulative.<br>40 orders at $25 CPA.</p></div><div class="day"><b>Days 4 to 6</b><p>Up to $650/day.<br>$2,950 cumulative.<br>118 orders cumulative.<br>Profit gate every day.</p></div><div class="day"><b>Days 7 to 10</b><p>Up to $1,050/day.<br>$7,150 cumulative.<br>286 orders cumulative.<br>Hold winners. Test one challenger.</p></div><div class="day"><b>Days 11 to 14</b><p>Up to $1,337.50/day.<br>$12,500 cumulative.<br>500 orders cumulative.<br>No forced spend to hit volume.</p></div></div>
     <p class="source">Budget envelopes, not guaranteed pacing or a rigid Meta scaling rule. Larger changes can disturb learning. Reallocate inside the total only when paid-order evidence holds. If gates fail, 500 is no longer supported at this budget; report the revised projection immediately.</p>
   </div></section>
   <section class="slide" id="versions"><div class="inner">
@@ -131,14 +168,14 @@
 
   <section class="slide" id="scoreboard"><div class="inner">
     <h2>The CEO sees <span class="blue">the whole funnel.</span></h2>
-    <div class="flow"><div class="step"><b>Spend</b><span>vs $20k base</span><small>Daily + cumulative</small></div><div class="step"><b>CPM</b><span>Target ≤ $24</span><small>Pressure</small></div><div class="step"><b>CPC</b><span>Target ≤ $1.00</span><small>Creative</small></div><div class="step"><b>LPV</b><span>Target ≤ $1.11</span><small>Traffic</small></div><div class="step"><b>ATC</b><span>Target ≤ $11.11</span><small>Offer</small></div><div class="step"><b>CPA</b><span>Target ≤ $40</span><small>Outcome</small></div></div>
-    <div class="stats"><div class="stat"><b>2.78%</b><span>LPV to purchase target</span></div><div class="stat"><b>27.8%</b><span>AddToCart to purchase</span></div><div class="stat"><b>500</b><span>total purchase target</span></div><div class="stat"><b>36/day</b><span>required velocity</span></div></div>
+    <div class="flow"><div class="step"><b>Spend</b><span>Earned tranche only</span><small>Daily + cumulative</small></div><div class="step"><b>CPM</b><span>Target $20</span><small>Pressure</small></div><div class="step"><b>CPC</b><span>Target $0.80</span><small>Creative</small></div><div class="step"><b>LPV</b><span>Target $0.89</span><small>Traffic</small></div><div class="step"><b>ATC</b><span>Target $8.89</span><small>Offer</small></div><div class="step"><b>CPA</b><span>≤ allowed cap</span><small>Profit first</small></div></div>
+    <div class="stats"><div class="stat"><b>3.56%</b><span>LPV to purchase target</span></div><div class="stat"><b>35.56%</b><span>AddToCart to purchase</span></div><div class="stat"><b>500</b><span>conditional purchase target</span></div><div class="stat"><b>36/day</b><span>required average velocity</span></div></div>
     <p class="source">The funnel targets are management thresholds, not historical account results. They are recomputed from the 500-purchase base model.</p>
   </div></section>
 
   <section class="slide" id="decision"><div class="inner">
     <h2>Decision required:<br><span class="blue">authorize the reset.</span></h2>
-    <div class="grid2"><div class="card"><h3>Approve the plan</h3><ul><li>$20,000 gated media envelope</li><li>One primary Sales campaign</li><li>Purchase volume, not lead volume</li><li>Six-concept creative production</li><li>Daily paid-order scoreboard</li></ul></div><div class="card"><h3>Before money is spent</h3><ul><li>Remove unapproved 50 / 12 seat caps</li><li>Resolve $149 vs $179 Blueprint</li><li>Align refund, credit and trial copy</li><li>Prove $49 / $79 payment + tracking</li><li>Confirm session capacity for 500</li></ul></div></div>
+    <div class="grid2"><div class="card"><h3>Approve validation only</h3><ul><li>$200 first test, not $12,500 upfront</li><li>Written net contribution and CPA cap</li><li>One primary Sales campaign</li><li>Three ads first, three challengers ready</li><li>Daily cash, profit and order scoreboard</li></ul></div><div class="card"><h3>Before money is spent</h3><ul><li>Resolve 50 / 12 seat capacity limits</li><li>Resolve $149 vs $179 Blueprint</li><li>Align refund, credit and trial copy</li><li>Prove $49 / $79 payment + tracking</li><li>Accept or reject initial test risk</li></ul></div></div>
     <p class="verdict">500 is the objective.<br><span class="blue">Paid-order evidence releases the budget.</span></p>
     <p class="source">Live offer audit found 50 seats/session and 12 VIP seats/session alongside a $179 × 5 Blueprint trial, conflicting with the requested scale and $149 reference. Current dates: Oct 27 / Nov 14. Do not invent a 14-day closing deadline for these later events. <a href="https://www.longevitylifeacademy.com/julie-masterclass/#pricing" target="_blank">Live pricing</a></p>
   </div></section>
