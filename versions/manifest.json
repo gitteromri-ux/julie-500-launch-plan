@@ -1,0 +1,23 @@
+[
+  {
+    "sha": "5f13275e63d38ce7ff53e825245f9fe1a5c176a2",
+    "commit_timestamp_utc": "2026-09-22T20:47:45Z",
+    "original_sha256": "0c3bbe32e13bff6e2668e20d2879652e2c3cfbb1060de7d14900c342a2f063e2",
+    "snapshot": "5f13275e63.html",
+    "mode": "read-only presentation archive; scripts, tracking and checkout disabled"
+  },
+  {
+    "sha": "bbd243ed500dc42719d60fbe13a9f8b0696ac43c",
+    "commit_timestamp_utc": "2026-09-17T12:16:13Z",
+    "original_sha256": "abc28d7acde0d679061c74c7d73fadec3aedbaa9ba02dc7ddb4fd1b643085b4e",
+    "snapshot": "bbd243ed50.html",
+    "mode": "read-only presentation archive; scripts, tracking and checkout disabled"
+  },
+  {
+    "sha": "fa915806babf4690c7bb69471e0f5ed9e8d79047",
+    "commit_timestamp_utc": "2026-09-17T11:41:25Z",
+    "original_sha256": "3126cb3ec396bd72d6936dd6b4674965f2af13cfbb997cfeecadbe142bccab0a",
+    "snapshot": "fa915806ba.html",
+    "mode": "read-only presentation archive; scripts, tracking and checkout disabled"
+  }
+]
