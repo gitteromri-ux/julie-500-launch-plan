@@ -24,29 +24,29 @@ window.DAILY_LOG = [
   ]
 },
 {
-  id:'day-2', day:2, date:'Tue 29 Sep 2026', asOf:'Partial, read at 19:23 Israel time', status:'red',
-  headline:'Day 2 so far: $411 spend, 1 purchase ($49), CPM $446. It went up, where the Blueprint launch had dropped 15x by day 2.',
+  id:'day-2', day:2, date:'Tue 29 Sep 2026', asOf:'Full day (final, read 02:15 Israel time 30 Sep)', status:'red',
+  headline:'Day 2 final: $500 spend, 1 purchase ($49), CPM $419. It went up, where the Blueprint launch had dropped 15x by day 2.',
   adsets:[
-    {name:'#108813 Set 01 · prospecting', budget:350, spend:214.79, imp:419, cpm:512.63, clicks:12, lp:12, cart:2, checkout:2, purchases:1, revenue:49},
-    {name:'#108814 Set 02 · retargeting', budget:75, spend:109.23, imp:288, cpm:379.27, clicks:5, lp:4, cart:0, checkout:0, purchases:0, revenue:0},
-    {name:'#108815 Set 03 · Julie 65s (team, new today)', budget:140, spend:86.67, imp:213, cpm:406.90, clicks:3, lp:2, cart:0, checkout:0, purchases:0, revenue:0}
+    {name:'#108813 Set 01 · prospecting', budget:350, spend:278.99, imp:599, cpm:465.76, clicks:14, lp:15, cart:2, checkout:2, purchases:1, revenue:49},
+    {name:'#108814 Set 02 · retargeting', budget:75, spend:118.00, imp:320, cpm:368.75, clicks:6, lp:5, cart:0, checkout:0, purchases:0, revenue:0},
+    {name:'#108815 Set 03 · Julie 65s (team, new today)', budget:140, spend:103.13, imp:274, cpm:376.39, clicks:5, lp:4, cart:0, checkout:0, purchases:0, revenue:0}
   ],
   verified:[
-    'All numbers pulled from the Meta Ads API at 19:23 Israel time. The day is still running in the US.',
+    'Final full-day numbers from the Meta Ads API (first read 19:23, replaced with finals at 02:15 Israel time on 30 Sep).',
     'The $49 purchase (09:00–10:00 Israel time) is counted by Meta (1 browser + 2 server hits, deduplicated to 1). NOT yet matched to a real CRM order.'
   ],
   readout:[
-    'CPM rose from $298 to $446 across the campaign; #108813 from $319 to $513. The Blueprint launch went from $285 to $19 on day 2.',
-    'Cost per LP visit today $22.82 vs plan $2.40 (9.5x over). Two-day total $15.65.',
-    'Conversion is the one thing working: #108813 has 46 LP visits → 3 carts → 3 checkouts → 2 purchases over two days (4.3% vs the plan’s 1.5%). Only 2 purchases, so this is a signal, not proof.',
-    'At 4.3% conversion, the plan’s $160 cost per purchase needs a CPM near $170 in #108813 (2x cut), not $20. Days 4–7 ($70) need about $75 (5x). Week 2 ($55) needs about $60 (6x).',
-    'Set 03 (#108815) confirms the problem is not only in #108813: the same Julie 65s video at $407 CPM, 2 LP visits.'
+    'CPM rose from $298 to $419 across the campaign; #108813 from $319 to $466. The Blueprint launch went from $285 to $19 on day 2.',
+    'Cost per LP visit $20.84 vs plan $2.40 (8.7x over). Two-day total $15.59.',
+    'Conversion is the one thing working: #108813 has 49 LP visits → 3 carts → 3 checkouts → 2 purchases over two days (4.1% vs the plan’s 1.5%). Only 2 purchases, so this is a signal, not proof.',
+    'At 4.1% conversion and about 24 LP visits per 1,000 impressions, the plan’s $160 cost per purchase needs a CPM near $155 in #108813 (3x cut from $466), not $20. Days 4–7 ($70) need about $70 (6–7x). Week 2 ($55) needs about $55 (8x).',
+    'Set 03 (#108815) confirms the problem is not only in #108813: the same Julie 65s video at $376 CPM, 4 LP visits.'
   ],
   benchmark:{
     note:'Blueprint launch (ad sets #108807 + #108808 from 3 Sep) vs masterclass (#118149 from 28 Sep), same audience, pixel and purchase optimization.',
     rows:[
       {day:1, bpCpm:285, bpCpl:6.10, mcCpm:298, mcCpl:12.85},
-      {day:2, bpCpm:19,  bpCpl:6.80, mcCpm:446, mcCpl:22.82, partial:true},
+      {day:2, bpCpm:19,  bpCpl:6.80, mcCpm:419, mcCpl:20.84},
       {day:3, bpCpm:46,  bpCpl:5.60},
       {day:4, bpCpm:37,  bpCpl:5.00},
       {day:5, bpCpm:38,  bpCpl:4.90},
@@ -74,6 +74,7 @@ window.DAILY_LOG = [
   scenarios:{
     title:'Day 3 (Wed 30 Sep) end-of-day read → day 4 decision',
     rows:[
+      {tone:'amber', name:'CPM around $120 at end of day', test:'Masterclass ads get about 21 LP visits per 1,000 impressions (Blueprint day 3: 8), so $120 CPM ≈ $5.70 per LP visit, the same cost per visit as the Blueprint launch on day 3 ($5.60). At the 2.9% campaign conversion that is about 100 visits and 2–3 purchases a day at roughly $200 each.', action:'Treat as on the curve if cost per LP visit ≤ $6.50 and day 3 has at least 1 purchase or 2 checkouts. Then take day 4 to the plan’s $1,143: #108813 $350 → $930 (in learning anyway, 2 of 50 conversions, so little to lose), #108815 stays $140 only if its CPM also fell (otherwise pause, move its $140 to #108813), #108814 stays $75. If about 100 visits bring 0 carts, the cheaper impressions are not buyers: hold $571.'},
       {tone:'green', name:'On the Blueprint curve', test:'Campaign CPM $46–75 and cost per LP visit about $5–6', action:'Hold, touch nothing. Day 4 goes to the plan’s $1,143/day as scheduled, put into what is converting.'},
       {tone:'amber', name:'Cheap impressions, same visits', test:'CPM falls but cost per LP visit stays above $10', action:'Meta is buying cheaper, lower-click impressions (the Blueprint day-2 pattern). Go to day 4’s budget only if purchases hold at or under $160; otherwise hold $571.'},
       {tone:'red', name:'Off the curve', test:'CPM still $300+', action:'Hold $571 on day 4. Doubling spend at $15+ per LP visit burns the week-2 budget. The Set 03 test ad result becomes the deciding lever; if it is also $300+, the cause is the destination, which is frozen and needs your freeze-lift sentence.'},
